@@ -1,0 +1,39 @@
+name: Build Automation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Scarica il codice dal repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Imposta l'ambiente Java 11 per Maven
+      - name: Setup Java JDK 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+          cache: 'maven'
+
+      # Fase di compilazione
+      - name: Compile
+        run: mvn -B clean compile
+
+      # Esecuzione test di unità
+      - name: Test
+        run: mvn -B test
+
+      # Creazione pacchetto e analisi statica
+      - name: Package ed Analisi Statica
+        run: mvn -B package
+
+      # Calcolo coverage e invio report a Coveralls
+      - name: Report Coveralls
+        run: mvn -B coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
+
