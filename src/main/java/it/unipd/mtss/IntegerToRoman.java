@@ -9,6 +9,16 @@ public class IntegerToRoman {
 
     public static String convert(int number) {
         String roman = "";
+
+        while (number >= 50) {
+            roman += "L";
+            number -= 50;
+        }
+
+        while (number >= 40) {
+            roman += "XL";
+            number -= 40;
+        }
         
         while (number >= 10) {
             roman += "X";
