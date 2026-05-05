@@ -10,6 +10,16 @@ public class IntegerToRoman {
     public static String convert(int number) {
         String roman = "";
 
+        while (number >= 100) {
+            roman += "C";
+            number -= 100;
+        }
+        
+        while (number >= 90) {
+            roman += "XC";
+            number -= 90;
+        }
+
         while (number >= 50) {
             roman += "L";
             number -= 50;

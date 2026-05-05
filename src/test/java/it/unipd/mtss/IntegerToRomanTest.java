@@ -178,6 +178,19 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void testConvertNumberThirtyToRomanXXX() {
+        // Arrange
+        int numberToConvert = 30;
+        String expectedRoman = "XXX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
     public void testConvertNumberThirtyNineToRomanXXXIX() {
         // Arrange
         int numberToConvert = 39;
@@ -234,6 +247,110 @@ public class IntegerToRomanTest {
         // Arrange
         int numberToConvert = 50;
         String expectedRoman = "L";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberSixtyToRomanLX() {
+        // Arrange
+        int numberToConvert = 60;
+        String expectedRoman = "LX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberSeventyFourToRomanLXXIV() {
+        // Arrange
+        int numberToConvert = 74;
+        String expectedRoman = "LXXIV";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberEightyEightToRomanLXXXVIII() {
+        // Arrange
+        int numberToConvert = 88;
+        String expectedRoman = "LXXXVIII";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberEightyNineToRomanLXXXIX() {
+        // Arrange
+        int numberToConvert = 89;
+        String expectedRoman = "LXXXIX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberNinetyToRomanXC() {
+        // Arrange
+        int numberToConvert = 90;
+        String expectedRoman = "XC";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberNinetyFourToRomanXCIV() {
+        // Arrange
+        int numberToConvert = 94;
+        String expectedRoman = "XCIV";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberNinetyNineToRomanXCIX() {
+        // Arrange
+        int numberToConvert = 99;
+        String expectedRoman = "XCIX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberOneHundredToRomanC() {
+        // Arrange
+        int numberToConvert = 100;
+        String expectedRoman = "C";
         
         // Act
         String actualRoman = IntegerToRoman.convert(numberToConvert);
