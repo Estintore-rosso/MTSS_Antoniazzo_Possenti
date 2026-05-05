@@ -358,5 +358,83 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals(expectedRoman, actualRoman);
     }
+
+    @Test
+    public void testConvertNumberThreeHundredToRomanCCC() {
+        // Arrange
+        int numberToConvert = 300;
+        String expectedRoman = "CCC";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberThreeHundredNinetyNineToRomanCCCXCIX() {
+        // Arrange
+        int numberToConvert = 399;
+        String expectedRoman = "CCCXCIX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberFourHundredToRomanCD() {
+        // Arrange
+        int numberToConvert = 400;
+        String expectedRoman = "CD";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberFourHundredFortyFourToRomanCDXLIV() {
+        // Arrange
+        int numberToConvert = 444;
+        String expectedRoman = "CDXLIV";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberFourHundredNinetyNineToRomanCDXCIX() {
+        // Arrange
+        int numberToConvert = 499;
+        String expectedRoman = "CDXCIX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberFiveHundredToRomanD() {
+        // Arrange
+        int numberToConvert = 500;
+        String expectedRoman = "D";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
 }
 
