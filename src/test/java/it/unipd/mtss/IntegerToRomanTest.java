@@ -132,5 +132,43 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals(expectedRoman, actualRoman);
     }
+    @Test
+    public void testConvertNumberFourteenToRomanXIV() {
+        // Arrange
+        int numberToConvert = 14;
+        String expectedRoman = "XIV";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberNineteenToRomanXIX() {
+        // Arrange
+        int numberToConvert = 19;
+        String expectedRoman = "XIX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberTwentyToRomanXX() {
+        // Arrange
+        int numberToConvert = 20;
+        String expectedRoman = "XX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
 }
 
