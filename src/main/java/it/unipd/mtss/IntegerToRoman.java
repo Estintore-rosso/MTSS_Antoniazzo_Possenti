@@ -8,9 +8,15 @@ package it.unipd.mtss;
 public class IntegerToRoman {
 
     public static String convert(int numero) {
-        int[] valori = {500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+
+        if (numero < 1 || numero > 1000) {
+            throw new IllegalArgumentException("Il numero deve essere compreso tra 1 e 1000");
+        }
+
+        int[] valori = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         String[] simboli = {
-            "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
+            "M", "CM", "D", "CD", "C", "XC",
+            "L", "XL", "X", "IX", "V", "IV", "I"
         };
         
         String roman = "";

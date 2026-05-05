@@ -436,5 +436,103 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals(expectedRoman, actualRoman);
     }
+
+    @Test
+    public void testConvertNumberSixHundredSixtySixToRomanDCLXVI() {
+        // Arrange
+        int numberToConvert = 666;
+        String expectedRoman = "DCLXVI";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberEightHundredEightyEightToRomanDCCCLXXXVIII() {
+        // Arrange
+        int numberToConvert = 888;
+        String expectedRoman = "DCCCLXXXVIII";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberNineHundredToRomanCM() {
+        // Arrange
+        int numberToConvert = 900;
+        String expectedRoman = "CM";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberNineHundredFortyFourToRomanCMXLIV() {
+        // Arrange
+        int numberToConvert = 944;
+        String expectedRoman = "CMXLIV";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberNineHundredNinetyNineToRomanCMXCIX() {
+        // Arrange
+        int numberToConvert = 999;
+        String expectedRoman = "CMXCIX";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    @Test
+    public void testConvertNumberOneThousandToRomanM() {
+        // Arrange
+        int numberToConvert = 1000;
+        String expectedRoman = "M";
+        
+        // Act
+        String actualRoman = IntegerToRoman.convert(numberToConvert);
+        
+        // Assert
+        assertEquals(expectedRoman, actualRoman);
+    }
+
+    //Test eccezioni
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConvertNumberZeroThrowsException() {
+        // Act
+        IntegerToRoman.convert(0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConvertNumberNegativeThrowsException() {
+        // Act
+        IntegerToRoman.convert(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConvertNumberTooHighThrowsException() {
+        // Act
+        IntegerToRoman.convert(1001);
+    }
 }
 
